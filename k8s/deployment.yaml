@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apuestas
+  namespace: casino
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apuestas
+  template:
+    metadata:
+      labels:
+        app: apuestas
+    spec:
+      containers:
+        - name: apuestas
+          image: casino/apuestas-service:latest
+          ports:
+            - containerPort: 8000
