@@ -8,6 +8,6 @@ spec:
     app: apuestas
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8000
+      port: 8005
+      targetPort: 8005
   type: ClusterIP

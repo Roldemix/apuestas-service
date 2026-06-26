@@ -19,7 +19,7 @@ spec:
         - name: apuestas
           image: 851725353324.dkr.ecr.us-east-1.amazonaws.com/casino/apuestas-service:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 8005
           env:
             - name: DB_HOST
               value: "postgres.casino.svc.cluster.local"
