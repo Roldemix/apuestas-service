@@ -4,7 +4,9 @@ metadata:
   name: apuestas
   namespace: casino
 spec:
-  replicas: 2
+  replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: apuestas
@@ -15,6 +17,7 @@ spec:
     spec:
       containers:
         - name: apuestas
-          image: casino/apuestas-service:latest
+          image: 851725353324.dkr.ecr.us-east-1.amazonaws.com/casino/apuestas-service:latest
           ports:
             - containerPort: 8000
+          env:
