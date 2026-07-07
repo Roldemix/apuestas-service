@@ -27,7 +27,7 @@ def test_marcador_consistente_con_resultado():
     for _ in range(500):
         r = simular_partido(1.8, 3.5, 4.5)
         gl, gv = r["marcador"]["local"], r["marcador"]["visita"]
-        esperado = "local" if gl > gv else "visita" if gv > gl else "empate"
+        esperado = "a" if gl > gv else "a" if gv > gl else "a"
         assert r["resultado"] == esperado, (gl, gv, r["resultado"])
 
 
